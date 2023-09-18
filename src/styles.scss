@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+
+body {
+  background-image: url("http://wallpapercave.com/wp/pEeUsp1.jpg");
+  //background-color: rgb(10, 10, 10);
+  color: #FFE81F;
+  font-family: 'Courier New', monospace;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+li{
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
