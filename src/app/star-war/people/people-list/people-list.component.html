@@ -1,6 +1,6 @@
 <form [formGroup]="formGroup" (ngSubmit)="doSearchDataChange()">
   <label>
-    <b>Search</b>
+    <b>Search: </b>
     <input type="text" formControlName="search" />
   </label>
 
@@ -31,7 +31,7 @@
 
 <ul *ngIf="data.results.length > 0; else notfound">
   <li *ngFor="let item of data.results">
-    {{ item.name }}
+    <a [routerLink]="getId(item.url)">{{ item.name }}</a>
   </li>
 </ul>
 

@@ -1,0 +1,10 @@
+<app-planet-list
+  *ngIf="data$ | async as data; else loading"
+  [data]="data.data"
+  [searchData]="data.params"
+  (searchDataChange)="doSearchDataChange($event)"
+/>
+
+<ng-template #loading>
+  <div>Loading Planet...</div>
+</ng-template>
