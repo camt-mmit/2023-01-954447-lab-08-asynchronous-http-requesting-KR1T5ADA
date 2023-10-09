@@ -1,31 +1,40 @@
 <form [formGroup]="formGroup" (ngSubmit)="doSearchDataChange()">
-  <label>
-    <b>Search: </b>
-    <input type="text" formControlName="search" />
-  </label>
+  <div class="topbar">
+    <div class="pagination-left">
+      <button
+        type="button"
+        [disabled]="!data.previous"
+        (click)="doPageChange(data.previous)"
+      >
+        <span class="material-symbols-outlined"> arrow_back_ios </span>
+      </button>
+    </div>
+    <div class="searchbar">
+      <label>
+        <input
+          type="text"
+          formControlName="search"
+          placeholder="Search by name"
+        />
+      </label>
+    </div>
+    <div class="pagination-right">
+      <button
+        type="button"
+        [disabled]="!data.next"
+        (click)="doPageChange(data.next)"
+      >
+        <span class="material-symbols-outlined"> arrow_forward_ios </span>
+      </button>
+    </div>
+  </div>
 
   <div>
-    <button
-      type="button"
-      [disabled]="!data.previous"
-      (click)="doPageChange(data.previous)"
-    >
-      <span class="material-symbols-outlined"> arrow_back_ios </span>
-    </button>
-
     <span>
       {{ formGroup.controls.page.value ? formGroup.controls.page.value : "1" }}
       /
       {{ pages }}
     </span>
-
-    <button
-      type="button"
-      [disabled]="!data.next"
-      (click)="doPageChange(data.next)"
-    >
-      <span class="material-symbols-outlined"> arrow_forward_ios </span>
-    </button>
   </div>
 </form>
 

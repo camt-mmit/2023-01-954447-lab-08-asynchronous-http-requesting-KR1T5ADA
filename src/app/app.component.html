@@ -1,15 +1,17 @@
-<h1 style="text-indent: 1.5ch; font-size: 2ch">{{ title }}</h1>
+<div class="topnav">
+  <h1 style="font-size: 2em">{{ title }}</h1>
 
-<nav>
-  <ul>
-    <li class="app-st-active">
-      <a routerLink="star-war">star wars</a>
-    </li>
-    <li class="app-st-active">
-      <a routerLink="google">google</a>
-    </li>
-  </ul>
-</nav>
+  <nav>
+    <ul>
+      <li class="app-st-active">
+        <a routerLink="star-war">STAR WARS</a>
+      </li>
+      <li class="app-st-active">
+        <a routerLink="google">GOOGLE</a>
+      </li>
+    </ul>
+  </nav>
+</div>
 
 <div class="container">
   <router-outlet></router-outlet>

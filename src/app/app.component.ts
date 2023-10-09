@@ -10,5 +10,5 @@ import { RouterOutlet, RouterLink } from '@angular/router';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'my-api-app';
+  title = 'MY-API-APP';
 }

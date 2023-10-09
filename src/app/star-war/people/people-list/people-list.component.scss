@@ -28,3 +28,14 @@ a:hover{
     0 0 100px 60px #f0f, /* middle magenta */
     0 0 140px 90px #0ff; /* outer cyan */
 }
+
+.topbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a{
+  text-decoration: none;
+}
