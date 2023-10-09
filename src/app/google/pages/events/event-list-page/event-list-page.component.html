@@ -1,2 +1,9 @@
-<p>event-list-page works!</p>
+<nav class="nav">
+  <ul class="nav-list">
+    <li class="nav-list">
+      <a routerLink="create">Create events</a>
+    </li>
+  </ul>
+</nav>
+
 <app-events-list *ngIf="data$ | async as data" [data]="data"></app-events-list>

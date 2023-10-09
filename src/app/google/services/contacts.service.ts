@@ -11,13 +11,12 @@ import {
 } from '../models';
 import { HttpClient } from '@angular/common/http';
 
-const url =
-  'https://www.googleapis.com/calendar/v3/calendars/primary/events' as const;
+const url = 'https://people.googleapis.com/v1/people/me/connections' as const;
 
 @Injectable({
   providedIn: 'root',
 })
-export class EventsService {
+export class ContactsService {
   private readonly tokenService = inject(TokenService);
   private readonly http = inject(HttpClient);
 

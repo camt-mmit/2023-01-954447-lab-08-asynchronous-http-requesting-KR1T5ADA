@@ -1,7 +1,8 @@
-<dl *ngFor="let event of data.items">
-  <dt>{{ event.summary }}</dt>
-  <dd>
-    {{ displayEventTimeRange(event) }}
-    <div>{{ event.description }}</div>
-  </dd>
-</dl>
+<mat-list>
+  <mat-list-item *ngFor="let event of data.items">
+    <mat-icon matListItemIcon>event</mat-icon>
+    <div matListItemTitle>{{ event.summary }}</div>
+    <div matListItemLine>{{ displayEventTimeRange(event) }}</div>
+    <p matListItemLine>{{ event.description }}</p>
+  </mat-list-item>
+</mat-list>
