@@ -8,7 +8,7 @@ export type Configuration = {
 };
 
 export const ConfigurationToken = new InjectionToken<Configuration>(
-  'Google configuration',
+  'Google Configuration',
 );
 
 export type TokenData = {
@@ -31,7 +31,6 @@ export type GetAllParams = {
 };
 
 export class AccessTokenNotFound extends Error {
-  override stack = new Error().stack;
   override name = this.constructor.name;
 
   constructor(message = 'Access Token not Found!!!', options?: ErrorOptions) {

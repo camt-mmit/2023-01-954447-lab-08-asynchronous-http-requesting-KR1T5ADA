@@ -1,1 +1,23 @@
-<p>contacts-form works!</p>
+<form [formGroup]="formGroup" (ngSubmit)="doSubmit()">
+  <mat-form-field color="primary" appearance="outline">
+    <mat-label>Name</mat-label>
+    <input type="text" matInput formControlName="name" />
+  </mat-form-field>
+
+  <mat-form-field color="primary" appearance="outline">
+    <mat-label>Email</mat-label>
+    <input type="text" matInput formControlName="email" />
+  </mat-form-field>
+
+  <mat-form-field color="primary" appearance="outline">
+    <mat-label>Phone Number</mat-label>
+    <input type="text" matInput formControlName="phone" />
+  </mat-form-field>
+
+  <div>
+    <button type="submit" mat-stroked-button>
+      <mat-icon>add</mat-icon>
+      Create
+    </button>
+  </div>
+</form>
