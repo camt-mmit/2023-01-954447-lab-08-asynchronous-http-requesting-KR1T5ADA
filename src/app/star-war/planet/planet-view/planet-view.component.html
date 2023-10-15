@@ -1,75 +1,56 @@
-<div class="box">
-  <div class="grid">
-    <div class="item">Name</div>
-    <div class="item">
-      {{ data.name }}
-    </div>
+<dl>
+  <dt>Name</dt>
+  <dd>
+    {{ data.name }}
+  </dd>
 
-    <div class="item">Diameter</div>
-    <div class="item">
-      {{ data.diameter }}
-    </div>
+  <dt>Diameter</dt>
+  <dd>
+    {{ data.diameter }}
+  </dd>
 
-    <div class="item">Rotation Period</div>
-    <div class="item">
-      {{ data.rotation_period }}
-    </div>
+  <dt>Rotation Period</dt>
+  <dd>
+    {{ data.rotation_period }}
+  </dd>
 
-    <div class="item">Orbital Period</div>
-    <div class="item">
-      {{ data.orbital_period }}
-    </div>
+  <dt>Orbital Period</dt>
+  <dd>
+    {{ data.orbital_period }}
+  </dd>
 
-    <div class="item">Gravity</div>
-    <div class="item">
-      {{ data.gravity }}
-    </div>
+  <dt>Gravity</dt>
+  <dd>
+    {{ data.gravity }}
+  </dd>
 
-    <div class="item">Population</div>
-    <div class="item">
-      {{ data.population }}
-    </div>
+  <dt>Population</dt>
+  <dd>
+    {{ data.population }}
+  </dd>
 
-    <div class="item">Climate</div>
-    <div class="item">
-      {{ data.climate }}
-    </div>
+  <dt>Climate</dt>
+  <dd>
+    {{ data.climate }}
+  </dd>
 
-    <div class="item">Terrain</div>
-    <div class="item">
-      {{ data.terrain }}
-    </div>
+  <dt>Terrain</dt>
+  <dd>
+    {{ data.terrain }}
+  </dd>
 
-    <div class="item">Surface Water</div>
-    <div class="item">
-      {{ data.surface_water }}
-    </div>
+  <dt>Surface Water</dt>
+  <dd>
+    {{ data.surface_water }}
+  </dd>
 
-    <div class="item">Create</div>
-    <div class="item">
-      {{ data.created | date: "medium" }}
-    </div>
+  <dt>Create</dt>
+  <dd>
+    {{ data.created | date: "medium" }}
+  </dd>
 
-    <div class="item">Edited</div>
-    <div class="item">
-      {{ data.edited | date: "medium" }}
-    </div>
-  </div>
-</div>
-<style>
-  .box {
-    width: 50%;
-    margin: 0 auto;
-    font-size: 25px;
-  }
-  .grid {
-    font-weight: bold;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 30px;
-    margin: 0 auto;
-  }
-  .item:nth-child(odd) {
-    text-align: center;
-  }
-</style>
+  <dt>Edited</dt>
+  <dd>
+    {{ data.edited | date: "medium" }}
+  </dd>
+</dl>

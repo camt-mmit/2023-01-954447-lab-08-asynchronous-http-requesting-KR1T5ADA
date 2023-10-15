@@ -17,8 +17,8 @@ export const routes: Routes = [
       { path: 'people/:id', component: PersonViewPageComponent },
       { path: 'species', component: SpeciesListPageComponent },
       { path: 'species/:id', component: SpecieViewPageComponent },
-      { path: 'planets', component: PlanetListPageComponent },
-      { path: 'planets/:id', component: PlanetViewPageComponent },
+      { path: 'planet', component: PlanetListPageComponent },
+      { path: 'planet/:id', component: PlanetViewPageComponent },
     ],
   },
 ];
