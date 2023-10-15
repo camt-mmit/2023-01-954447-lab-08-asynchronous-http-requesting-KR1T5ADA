@@ -1,12 +1,13 @@
 import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { List, Species, SearchData } from '../../models';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { List, SearchData, Species } from '../../models';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-people-list',
+  selector: 'app-species-list',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterLink],
   templateUrl: './species-list.component.html',
   styleUrls: ['./species-list.component.scss'],
 })
@@ -32,9 +33,7 @@ export class SpeciesListComponent {
       ...searchData,
     });
   }
-
   @Output() readonly searchDataChange = new EventEmitter<SearchData>();
-
   private emitSearchData(): void {
     const value = this.formGroup.value;
 
@@ -44,20 +43,23 @@ export class SpeciesListComponent {
     });
   }
 
+  protected get pages(): number {
+    return Math.ceil(this.data.count / 10);
+  }
+
+  protected getId(url: URL): string {
+    return url.pathname.replace(/\/$/, '').split('/').pop() ?? '';
+  }
+
   protected doSearchDataChange(): void {
     this.formGroup.controls.page.setValue('');
     this.emitSearchData();
-  }
-
-  protected get pages(): number {
-    return Math.ceil(this.data.count / 10);
   }
 
   protected doPageChange(url: URL | null): void {
     if (url === null) {
       return;
     }
-
     this.formGroup.controls.page.setValue(url.searchParams.get('page') ?? '');
     this.emitSearchData();
   }

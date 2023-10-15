@@ -10,6 +10,9 @@ const url = 'https://swapi.dev/api/species' as const;
   providedIn: 'root',
 })
 export class SpeciesService {
+  get(arg0: any): any {
+    throw new Error('Method not implemented.');
+  }
   private readonly http = inject(HttpClient);
 
   getAll(params?: SearchData): Observable<List<Species>> {

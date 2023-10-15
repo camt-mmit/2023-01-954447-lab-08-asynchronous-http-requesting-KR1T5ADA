@@ -11,6 +11,7 @@ const url = 'https://swapi.dev/api/planets' as const;
 })
 export class PlanetService {
   private readonly http = inject(HttpClient);
+  queryParams: any;
 
   getAll(params?: SearchData): Observable<List<Planet>> {
     return this.http

@@ -2,9 +2,10 @@ import { Routes } from '@angular/router';
 import { StarWarPageComponent } from './pages/star-war-page/star-war-page.component';
 import { PeopleListPageComponent } from './pages/people/people-list-page/people-list-page.component';
 import { SpeciesListPageComponent } from './pages/species/species-list-page/species-list-page.component';
+import { SpecieViewPageComponent } from './species/specie-view-page/specie-view-page.component';
 import { PlaneteListPageComponent } from './pages/planet/planet-list-page/planet-list-page.component';
 import { PersonViewPageComponent } from './pages/people/person-view-page/person-view-page.component';
-import { PlanetViewComponent } from './planet/planet-view/planet-view.component';
+import { PlanetViewPageComponent } from './planet/planet-view-page/planet-view-page.component';
 
 export const routes: Routes = [
   {
@@ -15,8 +16,9 @@ export const routes: Routes = [
       { path: 'people', component: PeopleListPageComponent },
       { path: 'people/:id', component: PersonViewPageComponent },
       { path: 'species', component: SpeciesListPageComponent },
-      { path: 'planet', component: PlaneteListPageComponent },
-      { path: 'planet/:id', component: PlanetViewComponent },
+      { path: 'species/:id', component: SpecieViewPageComponent },
+      { path: 'planets', component: PlaneteListPageComponent },
+      { path: 'planets/:id', component: PlanetViewPageComponent },
     ],
   },
 ];
