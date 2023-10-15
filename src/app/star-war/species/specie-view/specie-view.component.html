@@ -1,75 +1,34 @@
-<div class="box">
-  <div class="grid">
-    <div class="item">Name</div>
-    <div class="item">
-      {{ data.name }}
-    </div>
+<dl>
+  <dt>Name</dt>
+  <dd>{{ data.name }}</dd>
 
-    <div class="item">Classification</div>
-    <div class="item">
-      {{ data.classification }}
-    </div>
+  <dt>Classification</dt>
+  <dd>{{ data.classification }}</dd>
 
-    <div class="item">Designation</div>
-    <div class="item">
-      {{ data.designation }}
-    </div>
+  <dt>Designation</dt>
+  <dd>{{ data.designation }}</dd>
 
-    <div class="item">Average Height</div>
-    <div class="item">
-      {{ data.average_height }}
-    </div>
+  <dt>Average Height</dt>
+  <dd>{{ data.average_height }}</dd>
 
-    <div class="item">Average Lifespan</div>
-    <div class="item">
-      {{ data.average_lifespan }}
-    </div>
+  <dt>Average Lifespan</dt>
+  <dd>{{ data.average_lifespan }}</dd>
 
-    <div class="item">Eye Colors</div>
-    <div class="item">
-      {{ data.eye_colors }}
-    </div>
+  <dt>Eye Colors</dt>
+  <dd>{{ data.eye_colors }}</dd>
 
-    <div class="item">Hair Colors</div>
-    <div class="item">
-      {{ data.hair_colors }}
-    </div>
+  <dt>Hair Colors</dt>
+  <dd>{{ data.hair_colors }}</dd>
 
-    <div class="item">Skin Colors</div>
-    <div class="item">
-      {{ data.skin_colors }}
-    </div>
+  <dt>Skin Colors</dt>
+  <dd>{{ data.skin_colors }}</dd>
 
-    <div class="item">Language</div>
-    <div class="item">
-      {{ data.language }}
-    </div>
+  <dt>Language</dt>
+  <dd>{{ data.language }}</dd>
 
-    <div class="item">Create</div>
-    <div class="item">
-      {{ data.created | date: "medium" }}
-    </div>
+  <dt>Create</dt>
+  <dd>{{ data.created | date: "medium" }}</dd>
 
-    <div class="item">Edited</div>
-    <div class="item">
-      {{ data.edited | date: "medium" }}
-    </div>
-  </div>
-</div>
-<style>
-  .box {
-    width: 50%;
-    margin: 0 auto;
-    font-size: 25px;
-  }
-  .grid {
-    font-weight: bold;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 30px;
-    margin: 0 auto;
-  }
-  .item:nth-child(odd) {
-    text-align: center;
-  }
-</style>
+  <dt>Edited</dt>
+  <dd>{{ data.edited | date: "medium" }}</dd>
+</dl>

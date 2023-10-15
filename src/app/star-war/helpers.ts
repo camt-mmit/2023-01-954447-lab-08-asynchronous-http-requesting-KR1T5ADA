@@ -57,8 +57,8 @@ export function parseSpecies(rawSpecies: RawSpecies): Species {
   return {
     ...rawSpecies,
     ...parseResource(rawSpecies),
-    people: rawSpecies.people.map((url) => new URL(url)),
-    films: rawSpecies.films.map((url) => new URL(url)),
+    homeworld: rawSpecies.homeworld ? new URL(rawSpecies.homeworld) : null,
+    films: rawSpecies.films,
   };
 }
 

@@ -13,7 +13,7 @@ import { PlanetService } from 'src/app/star-war/services/planets.service';
   templateUrl: './planet-list-page.component.html',
   styleUrls: ['./planet-list-page.component.scss'],
 })
-export class PlaneteListPageComponent {
+export class PlanetListPageComponent {
   private readonly planetService = inject(PlanetService);
   private readonly router = inject(Router);
   private readonly route = inject(ActivatedRoute);

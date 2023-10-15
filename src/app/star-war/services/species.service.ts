@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
+import { List, RawList, SearchData, RawSpecies, Species } from '../models';
 import { Observable, map } from 'rxjs';
-import { List, RawList, RawSpecies, SearchData, Species } from '../models';
-import { parseSpeciesList } from '../helpers';
+import { parseSpecies, parseSpeciesList } from './../helpers';
 
 const url = 'https://swapi.dev/api/species' as const;
 
@@ -10,14 +10,16 @@ const url = 'https://swapi.dev/api/species' as const;
   providedIn: 'root',
 })
 export class SpeciesService {
-  get(arg0: any): any {
-    throw new Error('Method not implemented.');
-  }
   private readonly http = inject(HttpClient);
+  queryParams: any;
 
   getAll(params?: SearchData): Observable<List<Species>> {
     return this.http
       .get<RawList<RawSpecies>>(url, { params: params })
       .pipe(map(parseSpeciesList));
+  }
+
+  get(id: string): Observable<Species> {
+    return this.http.get<RawSpecies>(`${url}/${id}`).pipe(map(parseSpecies));
   }
 }
