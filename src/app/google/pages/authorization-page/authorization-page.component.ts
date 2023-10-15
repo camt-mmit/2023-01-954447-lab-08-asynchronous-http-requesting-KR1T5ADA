@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { TokenService } from '../../services/token.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-
 @Component({
   selector: 'app-authorization-page',
   standalone: true,

@@ -1,6 +1,5 @@
 import { Injectable, inject } from '@angular/core';
 import { Observable, map, switchMap } from 'rxjs';
-import { TokenService } from './token.service';
 import {
   EventFormData,
   EventQueryParams,
@@ -9,6 +8,7 @@ import {
   parseEventResource,
   parseEventsList,
 } from '../models';
+import { TokenService } from './token.service';
 import { HttpClient } from '@angular/common/http';
 
 const url =
@@ -31,10 +31,9 @@ export class EventsService {
           params,
         }),
       ),
-      map((eventsList) => parseEventsList(eventsList)),
+      map(parseEventsList),
     );
   }
-
   create(eventFormData: EventFormData): Observable<EventResource> {
     return this.tokenService.getAuthorizationHeader().pipe(
       switchMap((authorizationHeader) =>

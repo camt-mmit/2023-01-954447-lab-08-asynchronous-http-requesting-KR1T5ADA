@@ -7,9 +7,9 @@ import { RequireTokenPageComponent } from '../require-token-page/require-token-p
 @Component({
   selector: 'app-google-page',
   standalone: true,
-  imports: [CommonModule,RouterOutlet,RequireTokenPageComponent,RouterLink],
+  imports: [CommonModule, RouterOutlet, RequireTokenPageComponent, RouterLink],
   templateUrl: './google-page.component.html',
-  styleUrls: ['./google-page.component.scss']
+  styleUrls: ['./google-page.component.scss'],
 })
 export class GooglePageComponent {
   private readonly tokenService = inject(TokenService);

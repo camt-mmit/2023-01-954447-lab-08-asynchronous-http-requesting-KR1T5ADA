@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TokenService } from '../../services/token.service';
 import { RouterOutlet } from '@angular/router';
+import { TokenService } from '../../services/token.service';
 
 @Component({
   selector: 'app-require-token-page',
@@ -11,14 +11,11 @@ import { RouterOutlet } from '@angular/router';
   styleUrls: ['./require-token-page.component.scss'],
 })
 export class RequireTokenPageComponent {
-  private readonly TokenService = inject(TokenService);
+  private readonly tokenService = inject(TokenService);
 
-  protected readonly tokenReady$ = this.TokenService.tokenReady$;
-
+  protected readonly tokenReady$ = this.tokenService.tokenReady$;
   protected async login(): Promise<void> {
-    const url = await this.TokenService.getAuthorizationURL();
+    const url = await this.tokenService.getAuthorizationURL();
     location.href = `${url}`;
   }
-
-  //protected readonly authUrl$ = this.TokenService.getAuthorizationURL();
 }
